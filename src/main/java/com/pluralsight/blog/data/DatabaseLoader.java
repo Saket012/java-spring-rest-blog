@@ -17,13 +17,12 @@ public class DatabaseLoader implements ApplicationRunner {
             "Smart Home %s", "Mobile %s - For When You're On he Go", "The %s - Your New Favorite Accessory"};
     private final String[] gadgets = {
             "Earbuds", "Speakers", "Tripod", "Instant Pot", "Coffee Cup", "Keyboard", "Sunglasses"};
-    private final AuthorRepository authorRepository;
+   //private final AuthorRepository authorRepository;
     public List<Post> randomPosts = new ArrayList<>();
     public List<Author> authors = new ArrayList<>();
     private final PostRepository postRepository;
     @Autowired
-    public DatabaseLoader(AuthorRepository authorRepository, PostRepository postRepository) {
-        this.authorRepository = authorRepository;
+    public DatabaseLoader( PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 
